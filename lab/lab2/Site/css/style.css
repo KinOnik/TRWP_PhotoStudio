@@ -1,0 +1,109 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: #fafafa;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    padding: 10px 30px;
+    border-bottom: 2px solid #ccc;
+}
+
+.left-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.studio-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.right-block a {
+    color: #333;
+    font-weight: bold;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 15px auto;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
+
+.nav-left button,
+.nav-right button {
+    margin: 5px;
+    padding: 8px 15px;
+    border: 1px solid #333;
+    background-color: #fff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.nav-left button:hover,
+.nav-right button:hover {
+    background-color: #eee;
+}
+
+.nav button.active {
+    background-color: #333;
+    color: #fff;
+    font-size: 1.05em;
+}
+
+main {
+    flex: 1;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+h2 {
+    margin-top: 10px;
+    color: #333;
+}
+
+ul {
+    text-align: left;
+    width: fit-content;
+    margin: 0 auto 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 10px 0;
+    border-top: 2px solid #ccc;
+    margin-top: auto;
+}
