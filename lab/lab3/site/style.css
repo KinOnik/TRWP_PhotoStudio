@@ -1,0 +1,99 @@
+/* Общий стиль */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #fff);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100vh;
+}
+
+/* Hover эффект для меню */
+.hover-effect {
+    color: #333;
+    transition: all 0.3s;
+}
+.hover-effect:hover {
+    background-color: #b2ebf2;
+    color: #000;
+}
+
+/* Таблица */
+.table-info {
+    background-color: #80deea;
+    color: #000;
+}
+.table tbody tr:nth-child(odd) { background-color: #e0f7fa; }
+.table tbody tr:nth-child(even) { background-color: #ffffff; }
+
+/* Подвал и fieldset */
+footer {
+    background-color: #e0f7fa;
+    border-top: 2px solid #b2ebf2;
+}
+fieldset {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+legend {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Ползунок */
+.custom-range {
+    width: 100%;
+    height: 10px;
+    background: #e0f7fa;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    background: #80deea;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #4dd0e1;
+}
+.custom-range::-moz-range-thumb {
+    width: 20px; height: 20px;
+    background: #80deea;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #4dd0e1;
+}
+
+.container-fluid { padding-left: 15px; padding-right: 15px; }
+
+/* Мобильные стили */
+@media (max-width: 768px) {
+    body { background: linear-gradient(to bottom, #ffecb3, #fff); }
+    menu { flex-direction: column; align-items: center; }
+    .header-container { flex-direction: column; text-align: center; gap: 10px; }
+    .section-highlight { scroll-margin-top: 140px; }
+}
+
+/* Печать */
+@media print {
+    body { background: none; padding: 0; }
+    header, footer, nav { display: none; }
+    .table { border: 1px solid #dee2e6; }
+    .table-info { background-color: #f8f9fa !important; color: #000 !important; }
+}
+
+/* Отступ от шапки при прокрутке */
+.section-highlight {
+    scroll-margin-top: 170px;
+    transition: background-color 0.4s ease;
+}
+
+.column-highlight {
+    background-color: #e9ecef !important;
+    transition: background-color 0.3s ease;
+}
+
+#pandaTable .column-highlight {
+    background-color: #e9ecef !important;
+}
