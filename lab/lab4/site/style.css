@@ -1,0 +1,140 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f7fa;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.calendar-header button {
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#calendar {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#calendar th {
+    padding: 10px;
+    background: #f0f0f0;
+}
+
+#calendar td {
+    height: 80px;
+    width: 10%;
+    border: 1px solid #ddd;
+    font-size: 24px;
+    text-align: center;
+    padding: 5px;
+    position: relative;
+    cursor: pointer;
+}
+#calendar th.weekend {
+    color: #dc3545;
+    background-color: #f8d7da;
+}
+
+#calendar td:nth-of-type(6),
+#calendar td:nth-of-type(7) {
+    color: #dc3545;
+    background-color: #fdf2f2;
+}
+
+.has-tasks {
+    border: 3px solid #007bff !important;
+}
+
+.today {
+    background: #ffcccc !important;
+}
+
+.modal {
+    display: flex;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal.hidden { display: none; }
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#tasks-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+#tasks-list li {
+    padding: 8px;
+    background: #f8f9fa;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tasks-list li button {
+    background: #dc3545;
+    color: white;
+    border:none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.add-task {
+    display: flex;
+    margin-top: 15px;
+}
+
+#add-task-btn {
+    margin-left: 10px;
+}

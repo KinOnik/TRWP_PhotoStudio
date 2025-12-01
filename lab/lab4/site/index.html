@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Записная книжка – органайзер</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Записная книжка – органайзер</h1>
+
+        <div class="calendar-header">
+            <button id="prev-month">&larr;</button>
+            <h2 id="month-year"></h2>
+            <button id="next-month">&rarr;</button>
+        </div>
+
+        <table id="calendar">
+            <thead>
+                <tr>
+                    <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th>
+                    <th class="weekend">Сб</th><th class="weekend">Вс</th>
+                </tr>
+            </thead>
+            <tbody id="calendar-body"></tbody>
+        </table>
+    </div>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="close-modal" class="close">×</span>
+            <h3>Дела на <span id="modal-date"></span></h3>
+            <ul id="tasks-list"></ul>
+            <div class="add-task">
+                <input type="text" id="new-task" placeholder="Новое дело...">
+                <button id="add-task-btn">Добавить</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
