@@ -22,7 +22,7 @@ $(function () {
 
         $('html, body').animate({
             scrollTop: $target.offset().top - 120
-        }, 800);
+        }, 10);
     });
 
     let activeCol = null;
@@ -48,27 +48,17 @@ $(function () {
             const $el = $(this);
             let isOpen = false;
 
-            const originalStyles = {
-                position: $el.css('position') || 'static',
-                top: $el.css('top') || 'auto',
-                left: $el.css('left') || 'auto',
-                transform: $el.css('transform') || 'none',
-                zIndex: $el.css('z-index') || 'auto',
-                margin: $el.css('margin'),
-                padding: $el.css('padding'),
-                fontSize: $el.css('font-size') || '1rem'
-            };
-
+            const origfontSize = $el.css('font-size')
+			
             $el.css('cursor', 'pointer').off('click.popup').on('click.popup', function (e) {
                 e.stopPropagation();
 
                 if (isOpen) {
                     $el.stop(true, true)
-                       .animate({ fontSize: originalStyles.fontSize }, 400)
+                       .animate({ fontSize: origfontSize }, 400)
                        .queue(function (next) {
                            $el.removeClass('aside-popup')
-                              .removeAttr('style')
-                              .css(originalStyles);
+                              .removeAttr('style');
                            next();
                        });
                     isOpen = false;
@@ -76,7 +66,7 @@ $(function () {
                     $el.stop(true, true)
                        .addClass('aside-popup')
                        .css({ fontSize: '1.2rem' })
-                       .animate({ fontSize: '2.4rem' }, 600);
+                       .animate({ fontSize: '2.4rem' }, 400);
                     isOpen = true;
                 }
             });
@@ -91,15 +81,12 @@ $(function () {
     });
 
     $('.logo')
-        .on('mouseenter', function () {
-            $(this).stop(true).animate({ opacity: 0.3 }, 400)
-                   .animate({ opacity: 1 }, 400)
-                   .animate({ opacity: 0.3 }, 400)
-                   .animate({ opacity: 1 }, 400);
-        })
-        .on('mouseleave', function () {
-            $(this).stop(true).fadeTo(200, 1);
-        });
+    .on('mouseenter', function () {
+        $(this).addClass('logo-blink');
+    })
+    .on('mouseleave', function () {
+        $(this).removeClass('logo-blink');
+    });
 
 
     const $form = $('#surveyForm');

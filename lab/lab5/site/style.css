@@ -7,17 +7,6 @@ body {
     min-height: 100vh;
 }
 
-/* Hover эффект для меню */
-.hover-effect {
-    color: #333;
-    transition: all 0.3s;
-}
-.hover-effect:hover {
-    background-color: #b2ebf2;
-    color: #000;
-}
-
-/* Таблица */
 .table-info {
     background-color: #80deea;
     color: #000;
@@ -25,7 +14,6 @@ body {
 .table tbody tr:nth-child(odd) { background-color: #e0f7fa; }
 .table tbody tr:nth-child(even) { background-color: #ffffff; }
 
-/* Подвал и fieldset */
 footer {
     background-color: #e0f7fa;
     border-top: 2px solid #b2ebf2;
@@ -67,13 +55,6 @@ legend {
 
 .container-fluid { padding-left: 15px; padding-right: 15px; }
 
-/* Мобильные стили */
-@media (max-width: 768px) {
-    body { background: linear-gradient(to bottom, #ffecb3, #fff); }
-    menu { flex-direction: column; align-items: center; }
-    .header-container { flex-direction: column; text-align: center; gap: 10px; }
-    .section-highlight { scroll-margin-top: 140px; }
-}
 
 /* Печать */
 @media print {
@@ -83,7 +64,6 @@ legend {
     .table-info { background-color: #f8f9fa !important; color: #000 !important; }
 }
 
-/* Отступ от шапки при прокрутке */
 .section-highlight {
     scroll-margin-top: 170px;
     transition: background-color 0.4s ease;
@@ -92,10 +72,6 @@ legend {
 .column-highlight {
     background-color: #e9ecef !important;
     transition: background-color 0.3s ease;
-}
-
-#pandaTable .column-highlight {
-    background-color: #e9ecef !important;
 }
 
 #pandaTable tbody td:hover {
@@ -197,4 +173,13 @@ legend {
 @keyframes popupShow {
     0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.5) rotate(-8deg); }
     100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.logo-blink {
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
 }
