@@ -1,0 +1,185 @@
+/* Общий стиль */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #e0f7fa, #fff);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    min-height: 100vh;
+}
+
+.table-info {
+    background-color: #80deea;
+    color: #000;
+}
+.table tbody tr:nth-child(odd) { background-color: #e0f7fa; }
+.table tbody tr:nth-child(even) { background-color: #ffffff; }
+
+footer {
+    background-color: #e0f7fa;
+    border-top: 2px solid #b2ebf2;
+}
+fieldset {
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+legend {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* Ползунок */
+.custom-range {
+    width: 100%;
+    height: 10px;
+    background: #e0f7fa;
+    border-radius: 5px;
+    -webkit-appearance: none;
+}
+.custom-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px; height: 20px;
+    background: #80deea;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #4dd0e1;
+}
+.custom-range::-moz-range-thumb {
+    width: 20px; height: 20px;
+    background: #80deea;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid #4dd0e1;
+}
+
+.container-fluid { padding-left: 15px; padding-right: 15px; }
+
+
+/* Печать */
+@media print {
+    body { background: none; padding: 0; }
+    header, footer, nav { display: none; }
+    .table { border: 1px solid #dee2e6; }
+    .table-info { background-color: #f8f9fa !important; color: #000 !important; }
+}
+
+.section-highlight {
+    scroll-margin-top: 170px;
+    transition: background-color 0.4s ease;
+}
+
+.column-highlight {
+    background-color: #e9ecef !important;
+    transition: background-color 0.3s ease;
+}
+
+#pandaTable tbody td:hover {
+    background-color: #d1ecf1 !important;
+    transition: background-color 0.2s ease;
+}
+
+.jquery-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.jquery-menu li {
+	list-style: none !important;
+}
+
+.jquery-menu > li {
+    position: relative;
+}
+
+.jquery-menu > li > a {
+    background: #80deea;
+    color: #000;
+    padding: 0.8rem 1.6rem;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.jquery-menu > li > a:hover {
+    background: #4dd0e1;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.jquery-menu ul {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    min-width: 220px;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+    border: 3px solid #80deea;
+    padding: 0.7rem 0;
+    margin-top: 12px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.jquery-menu > li:hover > ul {
+    opacity: 1;
+    visibility: visible;
+    margin-top: 8px;
+}
+
+.jquery-menu ul a {
+    display: block;
+    padding: 0.7rem 1.4rem;
+    color: #333;
+    text-decoration: none;
+    transition: background 0.3s;
+    font-weight: 500;
+}
+
+.jquery-menu ul a:hover {
+    background: #b2ebf2;
+    border-radius: 8px;
+    margin: 0 0.5rem;
+}
+
+.aside-popup {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) scale(1) !important;
+    z-index: 9999 !important;
+    background: white !important;
+    padding: 50px 40px !important;
+    border-radius: 24px !important;
+    border: 6px solid #4dd0e1 !important;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.5) !important;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow: auto;
+    animation: popupShow 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes popupShow {
+    0%   { opacity: 0; transform: translate(-50%, -50%) scale(0.5) rotate(-8deg); }
+    100% { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+.logo-blink {
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+@keyframes logoPulse {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.3; }
+}
