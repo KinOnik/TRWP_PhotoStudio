@@ -12,7 +12,7 @@ html, body {
   line-height: 1.6;
 }
 
-/* ==================== FIXED HEADER С АНИМАЦИЕЙ СЖАТИЯ БЕЗ ПРЫЖКОВ ==================== */
+/* ==================== HEADER ==================== */
 .fixed-header {
   position: fixed;
   top: 0;
@@ -152,7 +152,7 @@ html, body {
   font-weight: bold;
 }
 
-/* ==================== HERO (только на главной) ==================== */
+/* ==================== HERO ==================== */
 .hero-section {
   height: 80vh;
   min-height: 600px;
@@ -216,7 +216,7 @@ main {
   color: #ccc;
 }
 
-/* ==================== КАРТОЧКИ УСЛУГ ==================== */
+/* ==================== КАРТОЧКИ ==================== */
 .services-gallery,
 .services-grid {
   display: grid;
@@ -298,7 +298,6 @@ footer {
   font-size: 16px;
 }
 
-/* ==================== АДАПТИВ ==================== */
 @media (max-width: 900px) {
   .header-search {
     display: none;
